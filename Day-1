@@ -1,0 +1,29 @@
+Flow of instruction / Control flow
+Sequential flow 
+Decision Making/ selection/
+Program to get prime number:-
+#include<stdio.h>
+int main(){
+    int n ,i, flag = 0;
+    printf("enter the value of n: \n");
+    scanf("%d",&n);
+    if(n<=1){
+        printf("given number is not prime"); //as prime number starts from 2
+        return 0;
+    }
+    for(i=2;i<=(n-1);i++){
+        if(n%i == 0){
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 0){
+        printf("given number is prime");
+    }else{
+        printf("given number is not prime");
+    }
+    return 0;
+
+}
+
+Program to get prime number between a given range:-
