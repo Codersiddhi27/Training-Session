@@ -1,0 +1,36 @@
+TASK-1
+Write C program to know whether the number is anagram or not:-
+//check whether two number are anagrams or not
+#include<stdio.h>
+int main(){
+    long a,b;
+    printf("enter the value of a and b");
+    scanf("%ld%ld",&a,&b);
+    int i;
+    int freq1[10]={0};
+    int freq2[10]={0};
+    while(a>0){
+        freq1 [a % 10]++;//digit count
+        a/=10;
+    }
+    while(b>0){
+        freq2 [b %10]++;//digit count
+        b/=10;
+    }
+    int flag=1;
+    for(i=0;i<10;i++){
+        if(freq1[i]!=freq2[i]){
+            flag=0;
+            break;
+        }
+    }
+    if(flag==0){
+        printf("number is not anagram");
+    }else{
+        printf("number is anagram");
+    }
+    return 0;
+
+}
+
+
