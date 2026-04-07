@@ -1,1 +1,9 @@
+Task :-01 
+Reverse word in a string
+python code:-
 
+str = input("enter the string that you want to reverse: ")
+word = str.split()
+word.reverse()
+result = " ".join(word)
+print(result)
